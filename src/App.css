@@ -1,38 +1,651 @@
-.App {
+
+html,body{
+    max-width: 100%;
+    
+    overflow-x: hidden;
+    
+}
+.navigation{
+    padding: 15px 30px 15px 30px;
+    max-width: 100%;
+    background-color:#291dda;
+    font-family: 'Ubuntu', sans-serif;
+    min-height: 15%;
+}
+.nav_list{
+    margin:0px 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.nav_brand{
+    font-size: 2.4rem;
+    font-weight:bold;
+}
+
+.eventa{
+    padding-left: 75px;
+}
+.container_custom{
+    max-width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    padding-bottom: 40px;
+}
+.homeContainer{
+    background-color:#444ed1; 
+    height: 100%;
+    padding: 15px 30px 15px 30px;
+}
+.homeWrapper{
+    width:100vw;
+    height: 70%;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.meetUp{
+    color: white;
+    font-size: 3.5rem;
+    font-family: "Montserrat-Black";
+    line-height: 1.5;
+    padding-left: 75px;
+}
+.img_phone{
+    width: 25%;
+    transform: rotate(25deg);
+    position: absolute;
+    right: 30%;
+    top: 3%;
+    
+}
+
+.buttons{
+    padding-left: 75px;
+    padding-top: 20px;
+}
+.button{
+    margin-right: 20px;
+    
+
+}
+i{
+    padding-right: 10px;
+}
+.section1{
+    padding-top:25px;
+}
+.section2{
+  padding: 120px 200px;
+  font-family: "Montserrat-Bold";
   text-align: center;
+  font-size: 1rem;
+  background:url('/images/eventset.jpg');
+  background-size:contain;
+  background-repeat:repeat;
+  
+}
+.icon{
+    color:#444ed1;
+    
+}
+h3+p{
+    font-size: 1.5rem;
+    
+}
+h3{
+    margin-top: 12px;
+}
+.test{
+    width:50%;
+    height: 100%;
+    border-radius: 100%;
+    
+}
+.testimonial-image{
+    width:100%;
+    margin: 20px;
+    border-radius: 100%;
+    text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.testimony{
+    background-color: #444ed1;
+    height: 70%;
+}
+.items{
+    padding:600px;
+    border-radius:100%;
+    margin-bottom: -278px;
+    margin-top: -580px;
+    overflow: hidden;
+}
+.testimonial-text {
+    font-size: 3rem;
+    line-height: 1.5;
+    
+}
+.arrows{
+    margin-top:30px;
+}
+.affiliates{
+    text-align: center;
+     
+}
+.press-logo{
+   height:50px;
+   width:200px;
+   margin: 30px 20px 80px;
+}
+.card-container{
+    padding: 50px 100px;
+}
+.btn-custom-outline{
+    border:2px solid #291dda;
+    color:#291dda;
+}
+.btn-custom-outline:hover{
+    background-color: #291dda;
+    color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-prestige-inline{
+    border:2px solid #291dda;
+    background-color: #291dda;
+    color: white;
+}
+.btn-prestige-inline:hover{
+    background-color: white;
+    color:#291dda;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn-custom-inline{
+    border:2px solid #1a0783;
+    background-color: #1a0783;
+    color: white;
+}
+.btn-custom-inline:hover{
+    background-color: white;
+    color:#1a0783;
+}
+.more-info{
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 100px 50px; 
+    
+    height: 70%;
+    background:url('/images/wedding1.jpg');
+    background-size:cover;
+    
+}
+.more-info>h1{
+font-family: "Montserrat-Black";
+font-size: 3.5rem;
+color: white;
+font-weight:bolder;
+line-height: 1.5;
+margin-bottom: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+.more-info p{
+    font-size: 1.5rem;
+}
+.more-info span{
+    font-weight: bold;
+}
+.white-section{
+    padding: 15px 100px;
+    text-align: center;
+    background-color:#291dda;
+    height:15%;
+}
+.social-footer{
+    margin-right: 20px;
+    color: white;
+    margin-bottom: 20px;
+}
+#footer p{
+    font-size: 1.1rem;
+    opacity: 0.8;
+    color: white;
+}
+#footer.container-fluid{
+    padding-right: 100px;
+}
+#root{
+    max-width: 100%;
+    height: 100vh;
+}
+.aboutText{
+    font-family: "Montserrat-Bold";
+    font-size: 1.5rem;
+    text-align: left;
+}
+.abt{
+    padding-top: 60px;
+    height: 70%;
+    font-family: "Montserrat-Black";
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.abt h1, .abt h3{
+    font-family: 'Suez One', serif;
+}
+
+.abt p{
+    font-family: 'Heebo', sans-serif;
+}
+.pricing{
+    
+    height: 90%;
+}
+
+
+@media only screen and (min-height:900px){
+   
+    .card-body{
+        padding: 20px 5px;
+    }
+    .card-body button{
+        padding-left:0px;
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width:1024px) and (orientation:landscape){
+    .img_phone{
+        width: 25%;
+        transform: rotate(25deg);
+        position: absolute;
+        right: 30%;
+        top: 5%;
+        
+    }
+
+
+    .section2{
+        padding:50px
+    }
+
+    .abt{
+        height:auto;
+    }
+
+    .meetUp{
+        color: white;
+        font-size: 2rem;
+        font-family: "Montserrat-Black";
+        line-height: 1.5;
+        padding-left: 75px;
+    }
+    .white-section{
+        height:auto;
+    }
+
+    .testimony {
+        background-color: #444ed1;
+        height: auto;
+    }
+}
+
+
+@media only screen and (max-width:800px) and (orientation:landscape){
+    .img_phone{
+        width: 55%;
+        transform: rotate(25deg);
+        position: absolute;
+        right: 30%;
+        top: 5%;
+        
+    }
+}
+
+
+@media only screen and (max-width:600px) and (orientation:landscape){
+    .img_phone{
+        width: 25%;
+        transform: rotate(25deg);
+        position: absolute;
+        right: 30%;
+        top: 5%;
+        
+    }
+
+   .homeWrapper{
+       height: auto;
+
+   }
+
+   .homeContainer{
+       height: auto;
+   }
+
+   .button{
+        
+    margin-bottom: 20px;
+
+}
+
+.white-section{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navigation{
+    height:auto;
+}
+}
+
+@media only screen and (max-height:1400px) and (orientation:portrait){
+    .img_phone{
+        width: 36%;
+        transform: rotate(25deg);
+        position: absolute;
+        right: 120%;
+        top: 120%;
+        
+    }
+}
+
+
+@media only screen and (max-height:1100px) and (orientation:portrait){
+    .img_phone{
+        width: 60%;
+        transform: rotate(25deg);
+        position: absolute;
+        right: 160%;
+        top: 160%;
+        
+    }
+
+    .section2{
+        padding:50px
+    }
+
+    .abt{
+        height:auto;
+    }
+
+    .meetUp{
+        color: white;
+        font-size: 2rem;
+        font-family: "Montserrat-Black";
+        line-height: 1.5;
+        padding-left: 75px;
+    }
+    .white-section{
+        height:auto;
+    }
+}
+
+@media only screen and (max-height:900px) and (orientation:portrait){
+    .img_phone{
+        width: 75%;
+        transform:rotate(0deg);
+        position: absolute;
+        right: 30%;
+        top: 4.5%;
+        
+    }
+    .meetUp{
+        color: white;
+        font-size: 2rem;
+        font-family: "Montserrat-Black";
+        line-height: 1.5;
+        padding-left: 5px;
+    }
+    .white-section{
+        height:auto;
+        padding: 15px 50px;
+    }
+
+    .smscreen{
+        width:300%;
+    }
+    .buttons{
+        /*padding-left: 75px; */
+        width: 68%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .button{
+        
+        margin-bottom: 20px;
+    
+    }
+
+  
+
+}
+
+@media only screen and (max-height:600px) and (orientation:portrait){
+    .homeWrapper{
+        height: auto;
+ 
+    }
+ 
+    .homeContainer{
+        height: auto;
+    }
+ 
+    .button{
+         
+     margin-bottom: 20px;
+ 
+ }
+ 
+ .white-section{
+     padding-left: 10px;
+     padding-right: 10px;
+     height: 15%;
+ }
+ 
+ .navigation{
+     height:auto;
+ }
+
+ .eventa{
+     padding-left: 0px;
+ }
+}
+
+@media only screen and (min-height:900px) and (min-width:1500px){
+    .testimony{
+        height: auto;
+    }
+}
+
+@media only screen and (max-height:700px) and (orientation:landscape){
+    .testimony{
+        height: auto;
+    }
+}
+
+@media only screen and (max-width:1024px) and (max-height:500px){
+    .abt{
+        height:auto;
+    }
+}
+
+@media only screen and (max-width:1200px) and (max-height:1400px){
+    
+    .items {
+        padding: 350px;
+        border-radius: 100%;
+        margin-bottom: 200px;
+        margin-top: -300px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width:1200px) and (max-height:800px){
+    .items{
+        padding:450px;
+        border-radius:100%;
+        margin-bottom: -28px;
+        margin-top: -400px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (min-height:900px) and (min-width:1500px){
+   .items{
+    padding: 700px;
+    border-radius: 100%;
+    margin-bottom: -358px;
+    margin-top: -530px;
+   }
+}
+
+@media only screen and (min-height:1440px){
+    .items {
+        padding: 1000px;
+        border-radius: 100%;
+        margin-bottom: -600px;
+        margin-top: -920px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width:900px) and (max-height:1300px){
+    .items {
+        
+            padding: 250px;
+            border-radius: 100%;
+            margin-bottom: 10px;
+            margin-top: -100px;
+        
+    }
+
+    .testimonial-text{
+        font-size: 28px;
+    }
+
+}
+
+@media only screen and (max-width:800px) and (max-height:1200px){
+    .items {
+        
+            padding: 200px;
+            border-radius: 100%;
+            margin-bottom: 10px;
+            margin-top: -100px;
+        
+    }
+
+    .testimonial-text{
+        font-size: 24px;
+    }
+
+}
+
+
+@media only screen and (orientation:portrait) and (max-height:1000px){
+    .items {
+        
+            padding: 120px;
+            border-radius: 100%;
+            margin-bottom: 100px;
+            margin-top: -40px;
+        
+    }
+
+    .testimonial-text{
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (max-width:1000px){
+    .card-container{
+        padding: 0px;
+    }
+    .pricing{
+        height:auto;
+        max-width:100%;
+        
+    }
+
+    .text-center{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media only screen and (orientation:portrait) and (min-width:600px){
+    .more-info{
+        background:url('/images/wedding1_portrait.jpg');
+        background-size:cover;
+        
+    }
+
+    .white-section{
+        height: auto;
+    }
+}
+
+@media only screen and (orientation:portrait) and (max-width:599px){
+    .more-info{
+        background:url('/images/wedding1_portrait_small.jpg');
+        background-size:cover;
+    }
+
+    .more-info h1{
+        font-family: "Montserrat-Black";
+        font-size: 1.5rem;
+        color: black;
+        font-weight:bolder;
+        
+        margin-bottom: 20px;
+        }
+        
+        .more-info p{
+            font-size: 16px;
+        }
+
+        .white-section{
+            height: auto;
+        }
+
+        .abt h1{
+            font-size: 2rem;
+        }
+
+        
+}
+
+@media only screen and (min-height:800px) and (orientation:portrait){
+    .white-section{
+        height: 15%;
+    }
+}
+
+@media only screen and (max-height:480px) and (orientation:landscape){
+.more-info{
+    height: auto;
+}
+
+    .more-info h1{
+        font-family: "Montserrat-Black";
+        font-size: 1.5rem;
+        color: black;
+        font-weight:bolder;
+        
+        margin-bottom: 40px;
+        }
+        
+        .more-info p{
+            font-size: 16px;
+        }
+}
+
+@media only screen and (min-height:1000px) and (orientation:portrait){
+    .abt {
+        
+        height: auto;
+    }
 }
