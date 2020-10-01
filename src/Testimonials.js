@@ -13,33 +13,30 @@ export default ()=>{
   <div className="carousel-inner">
     <div className="carousel-item testimony active container-fluid">
     <div className="carousel-caption d-md-block">
-      <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+      <h2 class="testimonial-text">Eventa is the best event planning company out there.Their services are unbeatable</h2>
       <em>Silicon Valley, California</em>
       </div>
-      <img src="images/Desert.jpg" className="d-block w-100 items" alt="desert"/>
+      <img src={require('./images/sara.jpg')} className="d-block w-100 items" alt="female face"/>
       
     </div>
     <div className="carousel-item testimony container-fluid">
-    
-      <img src="images/angela.png" className="d-block w-100 items" alt="Angela"/>
+      <img src={require('./images/andy.jpg')} className="d-block w-100 items" alt="Angela"/>
       <div className="carousel-caption d-md-block ">
-      <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+      <h2 class="testimonial-text">What I like most about Eventa is their quest for perfection.They get A+ in all service delivery metrics</h2>
       <em>Long Island, New York</em>
       </div>
     </div>
     <div className="carousel-item testimony container-fluid">
-    
-      <img src="images/dogImg.jpg" className="d-block w-100 items" alt="dog"/>
+      <img src={require('./images/clara.jpg')} className="d-block w-100 items" alt="dog"/>
       <div className="carousel-caption d-md-block">
-      <h2 class="testimonial-text">I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+      <h2 class="testimonial-text">Great company!Great event coverage!!Eventa rocks!!!</h2>
         <em>Pebbles, New York</em>
       </div>
     </div>
     <div className="carousel-item testimony container-fluid">
-    
-      <img src="images/ladyImg.jpg" className="d-block w-100 items" alt="lady"/>
+      <img src={require('./images/sammy.jpg')} className="d-block w-100 items" alt="lady"/>
       <div className="carousel-caption d-md-block">
-      <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+      <h2 class="testimonial-text">If you want a classy event done with perfection,Eventa is the answer,look no further!!!</h2>
         <em> Beverly, Illinois</em>
       </div>
     </div>

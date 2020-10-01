@@ -16,7 +16,7 @@ export default function Home(){
 
                 </div>
                 <div className = "col col-lg-6 col-md-4 col-sm-3 col-xs">
-                <img className = "img_phone" src = 'images/eventplanninged.png' alt = "Event written on a phone"/>
+                <img className = "img_phone" src ={require('./images/eventplanninged.png')} alt = "Event written on a phone"/>
                 </div>
             </div>
           </div>   

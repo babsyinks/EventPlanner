@@ -6,7 +6,7 @@ export default ()=>{
         <div className = "row">
             <h1 style = {{paddingRight:100}}>About Us</h1>
             <p className="aboutText">We are an elite event planning group with many years of experience.We have several happy clients 
-                from diverse cultures and backgrounds.We are here to make your event one for the ages
+                from diverse cultures and backgrounds.We are here to make your event one for the ages.
             </p>
         </div>    
        

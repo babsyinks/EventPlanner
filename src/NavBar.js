@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link,NavLink} from 'react-router-dom'
 export default ()=>{
 
     return (
@@ -9,23 +9,23 @@ export default ()=>{
             <span className="navbar-toggler-icon"></span>
             </button>
     
-             <Link className="navbar-brand nav_brand eventa" to="/">eventa</Link> 
+             <Link className="navbar-brand nav_brand eventa" to="/"><img src = {require('./images/logo.png')} alt="logo"/>eventa</Link> 
              <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-auto">
-                <li className="nav-item active nav_list">
-                    <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
+                <li className="nav-item nav_list">
+                    <NavLink className="nav-link" exact to="/">Home</NavLink>
                 </li>
                 <li className="nav-item nav_list">
-                    <Link className="nav-link" to="/about">About </Link>
+                    <NavLink className="nav-link" to="/about">About </NavLink>
                 </li>
                 <li className="nav-item nav_list ">
-                    <Link className="nav-link" to="/testimonials">Testimonials</Link>
+                    <NavLink className="nav-link" to="/testimonials">Testimonials</NavLink>
                 </li>
                 <li className="nav-item nav_list">
-                    <Link className="nav-link" to="/pricing">Pricing </Link>
+                    <NavLink className="nav-link" to="/pricing">Pricing </NavLink>
                 </li>
                 <li className="nav-item nav_list">
-                    <Link className="nav-link" to="/contact">Contact</Link>
+                    <NavLink className="nav-link" to="/contact">Contact</NavLink>
                 </li>
             </ul>
             </div>

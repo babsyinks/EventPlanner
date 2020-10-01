@@ -1,9 +1,38 @@
-import React from 'react'
+import React,{useState,Fragment} from 'react'
+import Modal from './Modal'
+import PriceModalChild from './PriceModalChild'
 
 export default ()=>{
-    return (
 
-<div className="container pricing">
+  const[openModal,setOpenModal] = useState(false)
+  const[name,setName] = useState('')
+  const[amount,setAmount] = useState(0)
+
+  const handleEvent = (e)=>{
+    setOpenModal(true)
+    const targetName = e.target.name
+    switch(targetName){
+      case 'Basic':
+        setName(targetName)
+        setAmount(50)
+        break
+
+      case 'Prestige':
+        setName(targetName)
+        setAmount(100)
+        break
+
+      case 'Custom':
+        setName(targetName)
+        setAmount(0)
+        break
+      default:
+        return
+    }
+  }
+    return (
+  <Fragment>
+  <div className="container pricing">
    
       <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 className="display-4">Choose the right plan for you</h1>
@@ -25,7 +54,7 @@ export default ()=>{
           <li>12 working hours</li>
           <li>100 guests feeding coverage</li>
         </ul>
-        <button type="button" className="btn btn-lg btn-block btn-custom-outline">Get Started</button>
+        <button name = "Basic" type="button" className="btn btn-lg btn-block btn-custom-outline" onClick = {handleEvent}>Get Started</button>
       </div>
     </div>
     <div className="card mb-4 shadow-sm">
@@ -41,7 +70,7 @@ export default ()=>{
           <li>18 working hours</li>
           <li>300 guests feeding coverage</li>
         </ul>
-        <button type="button" className="btn btn-lg btn-block btn-prestige-inline">Get Started</button>
+        <button name = "Prestige" type="button" className="btn btn-lg btn-block btn-prestige-inline" onClick = {handleEvent}>Get Started</button>
       </div>
     </div>
     
@@ -55,14 +84,16 @@ export default ()=>{
           </h1>
         <ul className="list-unstyled mt-3 mb-4">
           <li>As many staff as needed</li>
-          <li>Customer requested curtleries</li>
+          <li>Curtleries customized to taste</li>
           <li>24 working hours</li>
           <li>Feeding based on request</li>
         </ul>
-        <button type="button" className="btn btn-lg btn-block btn-custom-inline">Contact Us</button>
+        <button name = "Custom" type="button" className="btn btn-lg btn-block btn-custom-inline" onClick = {handleEvent}>Contact Us</button>
       </div>
     </div>
   </div>
   </div>
+  {openModal&& <Modal><PriceModalChild planName = {name} amount = {amount} displayModal = {setOpenModal}/></Modal>}
+  </Fragment>
     )
 }
