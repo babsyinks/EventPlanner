@@ -13,8 +13,8 @@ export default ()=>{
   <div className="carousel-inner">
     <div className="carousel-item testimony active container-fluid">
     <div className="carousel-caption d-md-block">
-      <h2 class="testimonial-text">Eventa is the best event planning company out there.Their services are unbeatable</h2>
-      <em>Silicon Valley, California</em>
+      <h2 className="testimonial-text">Eventa is the best event planning company out there.Their services are unbeatable</h2>
+      <em>Los Angeles, California</em>
       </div>
       <img src={require('./images/sara.jpg')} className="d-block w-100 items" alt="female face"/>
       
@@ -22,22 +22,22 @@ export default ()=>{
     <div className="carousel-item testimony container-fluid">
       <img src={require('./images/andy.jpg')} className="d-block w-100 items" alt="Angela"/>
       <div className="carousel-caption d-md-block ">
-      <h2 class="testimonial-text">What I like most about Eventa is their quest for perfection.They get A+ in all service delivery metrics</h2>
+      <h2 className="testimonial-text">What I like most about Eventa is their quest for perfection.They get A+ in all service delivery metrics</h2>
       <em>Long Island, New York</em>
       </div>
     </div>
     <div className="carousel-item testimony container-fluid">
       <img src={require('./images/clara.jpg')} className="d-block w-100 items" alt="dog"/>
       <div className="carousel-caption d-md-block">
-      <h2 class="testimonial-text">Great company!Great event coverage!!Eventa rocks!!!</h2>
-        <em>Pebbles, New York</em>
+      <h2 className="testimonial-text">Great company!Great event coverage!!Eventa rocks!!!</h2>
+        <em>Houston, Texas</em>
       </div>
     </div>
     <div className="carousel-item testimony container-fluid">
       <img src={require('./images/sammy.jpg')} className="d-block w-100 items" alt="lady"/>
       <div className="carousel-caption d-md-block">
-      <h2 class="testimonial-text">If you want a classy event done with perfection,Eventa is the answer,look no further!!!</h2>
-        <em> Beverly, Illinois</em>
+      <h2 className="testimonial-text">If you want a classy event done with perfection,Eventa is the answer,look no further!!!</h2>
+        <em> Chicago, Illinois</em>
       </div>
     </div>
   </div>

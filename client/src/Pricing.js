@@ -1,15 +1,18 @@
 import React,{useState,Fragment} from 'react'
 import Modal from './Modal'
 import PriceModalChild from './PriceModalChild'
+import './Pricing.css'
 
 export default ()=>{
 
   const[openModal,setOpenModal] = useState(false)
   const[name,setName] = useState('')
   const[amount,setAmount] = useState(0)
+  const[renderContent,setRenderContent] = useState(true)
 
   const handleEvent = (e)=>{
     setOpenModal(true)
+    setRenderContent(true)
     const targetName = e.target.name
     switch(targetName){
       case 'Basic':
@@ -31,30 +34,32 @@ export default ()=>{
     }
   }
     return (
-  <Fragment>
-  <div className="container pricing">
+     !renderContent?(
+       <div className = "fullPage"><p>Still Loading...</p></div>
+     ):<Fragment>
+        <div className="container pricing">
    
-      <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 className="display-4">Choose the right plan for you</h1>
-        <p className="lead">Simple and affordable price plans for your event</p>
-      </div>
-  <div className="card-deck mb-3 text-center">
-      <div className="card mb-4 shadow-sm">
-        <div className="card-header">
-          <h4 className="my-0 font-weight-normal">Basic</h4>
-      </div>
-      <div className="card-body">
-        <h1 className="card-title pricing-card-title">$50
+            <div className="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+              <h1 className="display-4">Choose the right plan for you</h1>
+              <p className="lead">Simple and affordable price plans for your event</p>
+            </div>
+            <div className="card-deck mb-3 text-center">
+          <div className="card mb-4 shadow-sm">
+              <div className="card-header">
+                <h4 className="my-0 font-weight-normal">Basic</h4>
+              </div>
+          <div className="card-body">
+            <h1 className="card-title pricing-card-title">$50
 
-        <small className="text-muted">/day</small>
-        </h1>
-        <ul className="list-unstyled mt-3 mb-4">
-          <li>10 dedicated staff</li>
-          <li>Silver curtleries</li>
-          <li>12 working hours</li>
-          <li>100 guests feeding coverage</li>
-        </ul>
-        <button name = "Basic" type="button" className="btn btn-lg btn-block btn-custom-outline" onClick = {handleEvent}>Get Started</button>
+            <small className="text-muted">/day</small>
+            </h1>
+            <ul className="list-unstyled mt-3 mb-4">
+              <li>10 dedicated staff</li>
+              <li>Silver curtleries</li>
+              <li>12 working hours</li>
+              <li>100 guests feeding coverage</li>
+            </ul>
+            <button name = "Basic" type="button" className="btn btn-lg btn-block btn-custom-outline" onClick = {handleEvent}>Get Started</button>
       </div>
     </div>
     <div className="card mb-4 shadow-sm">
@@ -93,7 +98,7 @@ export default ()=>{
     </div>
   </div>
   </div>
-  {openModal&& <Modal><PriceModalChild planName = {name} amount = {amount} displayModal = {setOpenModal}/></Modal>}
+  {openModal&& <Modal><PriceModalChild planName = {name} amount = {amount} displayModal = {setOpenModal} displayPrice = {setRenderContent}/></Modal>}
   </Fragment>
     )
 }

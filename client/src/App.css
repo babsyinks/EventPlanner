@@ -59,7 +59,6 @@ html,body{
     position: absolute;
     right: 30%;
     top: 3%;
-    
 }
 
 .buttons{
@@ -68,8 +67,6 @@ html,body{
 }
 .button{
     margin-right: 20px;
-    
-
 }
 i{
     padding-right: 10px;
@@ -170,59 +167,7 @@ h3{
     background-color: white;
     color:#1a0783;
 }
-.more-info{
-    display: flex;
-    justify-content:flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 100px 50px; 
-    
-    height: 70%;
-    background:url('./images/wedding1.jpg');
-    background-size:cover;
-    
-}
-.more-info>h1{
-font-family: "Montserrat-Black";
-font-size: 3.5rem;
-color: white;
-font-weight:bolder;
-line-height: 1.5;
-margin-bottom: 40px;
-}
 
-.more-info p{
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    
-}
-.more-info span{
-    font-weight: bold;
-    padding-bottom: 0px;  
-}
-.more-info input{
-    width: 80%;
-    border:none;
-    border-bottom: 1px solid black;
-    background: none;
-    outline: none;
-}
-.more-info select{
-    width: 80%;
-    background: none;
-    border: 1px solid black;
-    outline: none;  
-}
-
-.more-info button{
-    width: 100%;
-    padding:10px;
-    background:none;
-    border:1px solid rgb(41, 38, 38);
-    outline: none;
-    font-weight: bold;
-}
 .white-section{
     padding: 15px 100px;
     text-align: center;
@@ -608,11 +553,6 @@ margin-bottom: 40px;
 }
 
 @media only screen and (orientation:portrait) and (min-width:600px){
-    .more-info{
-        background:url('./images/wedding1_portrait.jpg');
-        background-size:cover;
-        
-    }
 
     .white-section{
         height: auto;
@@ -620,24 +560,6 @@ margin-bottom: 40px;
 }
 
 @media only screen and (orientation:portrait) and (max-width:599px){
-    .more-info{
-        background:url('./images/wedding1_portrait_small.jpg');
-        background-size:cover;
-    }
-
-    .more-info h1{
-        font-family: "Montserrat-Black";
-        font-size: 1.5rem;
-        color: black;
-        font-weight:bolder;
-        
-        margin-bottom: 20px;
-        }
-        
-        .more-info p{
-            font-size: 16px;
-        }
-
         .white-section{
             height: auto;
         }
@@ -655,28 +577,9 @@ margin-bottom: 40px;
     }
 }
 
-@media only screen and (max-height:480px) and (orientation:landscape){
-.more-info{
-    height: auto;
-}
-
-    .more-info h1{
-        font-family: "Montserrat-Black";
-        font-size: 1.5rem;
-        color: black;
-        font-weight:bolder;
-        
-        margin-bottom: 40px;
-        }
-        
-        .more-info p{
-            font-size: 16px;
-        }
-}
 
 @media only screen and (min-height:1000px) and (orientation:portrait){
     .abt {
-        
         height: auto;
     }
 }

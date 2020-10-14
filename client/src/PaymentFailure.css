@@ -1,0 +1,16 @@
+.PaymentFailure{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.PaymentFailure h1{
+   color: rgb(185, 0, 0); 
+}
+.PaymentFailure p {
+    
+    font-size: 18px;
+    
+}
