@@ -10,14 +10,12 @@ dotenv.config({path:path.join(__dirname,'.env')})
 const FLUTTER_SECRET = process.env.FLUTTER_WAVE_SECRET_KEY
 
 axios.defaults.headers.common['Authorization'] = `Bearer ${FLUTTER_SECRET}`
-//axios.defaults.baseURL = 'https://api.flutterwave.com/v3/payments'
 const port = process.env.PORT || 3001
 const app = express()
 
 app.use(express.json())
 
 app.post('/flutter',async (req,res)=>{
-    //tx_ref must be unique
     const obj = req.body
     try {
           const result = await axios.post('https://api.flutterwave.com/v3/payments',obj)
@@ -31,10 +29,8 @@ app.post('/flutter',async (req,res)=>{
 app.get('verify/:txId',async (req,res)=>{
     const response = await axios.get(`https://api.flutterwave.com/v3/transactions/${req.params.txId}/verify`,{'headers':{'Content-Type':'application/json'}})
     console.log(response)
-   // console.log(response.body)
     res.json(response)
 })
-//port: 465,
 app.post('/custom',(req,res)=>{
     const{name,email,phonenumber,days,tx_ref} = req.body
     const transporter = nodemailer.createTransport({
@@ -168,12 +164,17 @@ app.post('/contact',(req,res)=>{
 })
 
 if(process.env.NODE_ENV === "production"){
+    app.use(express.static(path.resolve(__dirname,'client','build')))
     app.get('*',(req,res)=>{ 
       res.sendFile(path.join(__dirname,'client','build','index.html'))
   })
 
-}
+  app.listen(port,()=>{
+    console.log('Listening on port ',port) 
+})
 
+}
+else{
 app.get('*',(req,res)=>{ 
     res.sendFile(path.join(__dirname,'client','public','index.html'))
 })
@@ -183,10 +184,17 @@ const credentials = {
                      cert:fs.readFileSync(path.join(__dirname,'client','cert.pem'))
                     } 
 
-const serv = https.createServer(credentials,app)  
-
-//app.get()  
+const serv = https.createServer(credentials,app) 
 
 serv.listen(port,()=>{
     console.log('Listening on port ',port) 
 })
+
+}
+
+
+
+
+
+  
+

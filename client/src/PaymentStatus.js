@@ -6,8 +6,6 @@ import PaymentSuccess from './PaymentSuccess'
 const PaymentStatus = ({location,match,history})=>{
 const[loading,setLoading] = useState(true)    
 
-//tx_ref=ref&transaction_id=30490&status=successful
-
 useEffect(()=>{
     (async ()=>{
         const parsedVals = qs.parse(location.search)

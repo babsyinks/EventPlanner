@@ -5,21 +5,6 @@ import {validateVal} from './PriceModalChild'
 import Modal from './Modal'
 import './Contact.css'
 
-/* export const validateVal = (value,validator,setVal,setValidity,setIsSet,trimSpace)=>{
-  let valid
-  if(trimSpace){
-      const trimmedStr = value.replace(/\s/g,'')
-      valid = validator(trimmedStr)  
-      
-  }
-  else{
-      valid = validator(value)
-  }
-  setVal(value.replace(/\s{2,}/g,' '))
-  setValidity(valid)
-  value.length?setIsSet(true):setIsSet(false)
-} */
-
 export default (props)=>{
   const[isLoading,setIsLoading] = useState(false)
   const[isDisabled,setIsDisabled] = useState(true)
@@ -45,7 +30,6 @@ export default (props)=>{
     }
 }, [emailIsValid,phoneNumberIsValid,nameIsValid,messageIsValid])
 
-//validateVal = (value,validator,setVal,setValidity,setIsSet,trimSpace)
   const handleChange = (e)=>{
     const value = e.target.value
     switch(e.target.name){

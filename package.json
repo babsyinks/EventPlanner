@@ -19,14 +19,6 @@
     "dev":"nodemon server.js",
     "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/babsyinks/EventPlanner.git"
-  },
   "author": "Babawarun Yinka",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/babsyinks/EventPlanner/issues"
-  },
-  "homepage": "https://github.com/babsyinks/EventPlanner#readme"
+  "license": "ISC"
 }
