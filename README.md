@@ -14,10 +14,10 @@ production ready endpoint.
 If you will like to test payment,use this test card:
 
 <b>Card number:</b> 5531 8866 5214 2950<br/>
-cvv: 564
-Expiry: 09/32
-Pin: 3310
-OTP: 12345
+<b>cvv:</b> 564<br/>
+<b>Expiry:<b/> 09/32<br/>
+<b>Pin:<b/> 3310<br/>
+<b>OTP:<b/> 12345<br/>
 
 2.Using of paid ssl. A self signed free certificate was used in development.A paid ssl
 will require continous renewal over time,so since the app is demonstrative,a free self signed 
