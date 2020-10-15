@@ -13,7 +13,7 @@ Since this app has not been commercialized,there was no need to use the real
 production ready endpoint.
 If you will like to test payment,use this test card:
 
-Card number: 5531 8866 5214 2950
+<b>Card number:</b> 5531 8866 5214 2950<br/>
 cvv: 564
 Expiry: 09/32
 Pin: 3310
