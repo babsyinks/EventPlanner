@@ -171,11 +171,12 @@ const PriceModalChild = (props)=>{
             }
         }
         else{
+            const redirectUrl = process.env.REDIRECT_URL || `https://localhost:3000/payment-status/`
             const txn_obj = {
                 "tx_ref":txRef,
                 "amount":bill,
                 "currency":"USD",
-                "redirect_url":`https://localhost:3000/payment-status/${txRef}/${props.planName}`,
+                "redirect_url":`${redirectUrl}${txRef}/${props.planName}`,
                 "payment_options":"card",
                 "customer":{
                 "email":email,
@@ -185,7 +186,7 @@ const PriceModalChild = (props)=>{
                 "customizations":{
                 "title":"Eventa Booking",
                 "description":"Book With Us For Your Top Notch Event Planning",
-                "logo":"/client/public/logo.png"
+                "logo":require("./images/logo.png")
                 }
 
         } 

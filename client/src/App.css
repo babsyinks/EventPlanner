@@ -578,3 +578,15 @@ h3{
         height: auto;
     }
 }
+@media only screen and (max-height:320px) and (orientation:landscape){
+.homeWrapper{
+    height: auto;
+}
+}
+
+@media only screen and (max-width:300px) and (orientation:portrait){
+    .img_phone{
+        display: none;
+    }
+    }
+
