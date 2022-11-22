@@ -5,6 +5,7 @@ const fs = require('fs')
 const axios = require('axios')
 const dotenv = require('dotenv')
 const nodemailer = require('nodemailer')
+const cors = require('cors')
 dotenv.config({path:path.join(__dirname,'.env')})
 
 const FLUTTER_SECRET = process.env.FLUTTER_WAVE_SECRET_KEY
@@ -12,9 +13,18 @@ const FLUTTER_SECRET = process.env.FLUTTER_WAVE_SECRET_KEY
 axios.defaults.headers.common['Authorization'] = `Bearer ${FLUTTER_SECRET}`
 const port = process.env.PORT || 3001
 const app = express()
-
 app.use(express.json())
-
+var whitelist = ['https://eventaserver.onrender.com']
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+app.use(cors(corsOptions))
 app.post('/api/flutter',async (req,res)=>{
     const obj = req.body
     try {
