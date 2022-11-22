@@ -52,7 +52,7 @@ export default (props)=>{
 
   const handleSubmit = async ()=>{
     setIsLoading(true)
-   const {data:{customer_email_success,company_email_success}} = await axios.post('/api/contact',{name,phoneNumber,email,message})
+   const {data:{customer_email_success,company_email_success}} = await axios.post('https://eventaserver.onrender.com/api/contact',{name,phoneNumber,email,message})
    setIsLoading(false)
    if(customer_email_success && company_email_success){
     props.history.push('/success/Thank You!An Email Has Been Sent To You.We Will Get Back To You Soon./Message Received!')
