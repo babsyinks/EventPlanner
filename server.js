@@ -26,7 +26,7 @@ app.post('/flutter',async (req,res)=>{
     } 
 })
 
-app.get('verify/:txId',async (req,res)=>{
+app.get('/verify/:txId',async (req,res)=>{
     const response = await axios.get(`https://api.flutterwave.com/v3/transactions/${req.params.txId}/verify`,{'headers':{'Content-Type':'application/json'}})
     console.log(response)
     res.json(response)
