@@ -18,7 +18,7 @@ useEffect(()=>{
             history.push('/payment-failure/This Transaction Could Not Be Completed.Try Again Later./Incomplete Transaction')
         }
         else{
-        const res = await axios.get(`/verify/${txId}`)
+        const res = await axios.get(`/api/verify/${txId}`)
         if(res.status === 200){
             setLoading(false)
         }

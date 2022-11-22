@@ -158,7 +158,7 @@ const PriceModalChild = (props)=>{
 
             setIsLoading(true)
             setModalForm(false)
-            const {data:{customer_email_success,company_email_success}} = await axios.post('/custom',txn_obj)
+            const {data:{customer_email_success,company_email_success}} = await axios.post('/api/custom',txn_obj)
             setIsLoading(false)
             if(customer_email_success && company_email_success){
                 props.history.push('/success/Information Recieved!,You"ll Be Shortly Contacted To Know Your Unique Needs,So That You"ll Be Fairly Billed./Information Received!')
@@ -192,7 +192,7 @@ const PriceModalChild = (props)=>{
         } 
         setIsLoading(true)
         setModalForm(false)
-        const {data} = await axios.post("/flutter",txn_obj)
+        const {data} = await axios.post("/api/flutter",txn_obj)
         setIsLoading(false)
         props.displayPrice(false)
         if(data.status === 'success'){
