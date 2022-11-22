@@ -30,7 +30,7 @@ app.get('/verify/:txId',async (req,res)=>{
 /*     const response = await axios.get(`https://api.flutterwave.com/v3/transactions/${req.params.txId}/verify`,{'headers':{'Content-Type':'application/json'}})
     console.log(response)
     res.json(response) */
-    res.json({message:working})
+    res.json({message:'working'})
 })
 app.post('/custom',(req,res)=>{
     const{name,email,phonenumber,days,tx_ref} = req.body
