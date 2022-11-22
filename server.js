@@ -14,7 +14,7 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${FLUTTER_SECRET}`
 const port = process.env.PORT || 3001
 const app = express()
 app.use(express.json())
-var whitelist = ['https://eventaserver.onrender.com,https://eventa-luxury.onrender.com']
+/* var whitelist = ['https://eventaserver.onrender.com, https://eventa-luxury.onrender.com']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
@@ -23,9 +23,9 @@ var corsOptions = {
       callback(new Error('Not allowed by CORS'))
     }
   }
-}
+} */
 app.options('*', cors())
-app.use(cors(corsOptions))
+app.use(cors())
 app.post('/api/flutter',async (req,res)=>{
     const obj = req.body
     try {
