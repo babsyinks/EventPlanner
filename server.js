@@ -24,6 +24,7 @@ var corsOptions = {
     }
   }
 }
+app.options('*', cors())
 app.use(cors(corsOptions))
 app.post('/api/flutter',async (req,res)=>{
     const obj = req.body
