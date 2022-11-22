@@ -1,0 +1,163 @@
+.more-info{
+    display: flex;
+    justify-content:flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 100px 50px; 
+    background:url('./images/wedding1.jpg');
+    background-size:cover;
+    
+}
+.more-info>h1{
+font-family: "Montserrat-Black";
+font-size: 3.5rem;
+color: white;
+font-weight:bolder;
+line-height: 1.5;
+margin-bottom: 40px;
+}
+
+.more-info p{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.more-info span{
+    font-weight: bold;
+    padding-bottom: 0px;  
+}
+.more-info input{
+    width: 80%;
+    border:none;
+    border-bottom: 1px solid black;
+    background: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.more-info textarea{
+    width: 80%;
+    border:1px solid black;
+    background: none;
+    outline: none;
+    
+}
+
+.more-info select{
+    width: 80%;
+    background: none;
+    border: 1px solid black;
+    outline: none;  
+}
+.submitInfo{
+    width:100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.more-info button{
+    width: 80%;
+    padding:10px;
+    background:none;
+    border:1px solid rgb(41, 38, 38);
+    outline: none;
+    font-weight: bold;
+}
+
+.more-info button:not(:disabled):hover{
+    color:white;
+    background-color: #291dda;
+}
+.more-info .valid{
+    border-bottom: 1px solid green;
+}
+.more-info .inValid{
+    border-bottom: 1px solid red;
+}
+
+.more-info .validTa{
+    border: 1px solid green;
+}
+.more-info .inValidTa{
+    border: 1px solid red;
+}
+
+@media only screen and (orientation:portrait) and (min-width:600px){
+    .more-info{
+        background:url('./images/wedding1_portrait.jpg');
+        background-size:cover;
+        
+    }
+}
+
+@media only screen and (orientation:portrait) and (max-width:599px){
+    .more-info{
+        background:url('./images/wedding1_portrait_small.jpg');
+        background-size:cover;
+    }
+
+    .more-info h1{
+        font-family: "Montserrat-Black";
+        font-size: 1.5rem;
+        color: black;
+        font-weight:bolder;
+        
+        margin-bottom: 20px;
+        }
+        
+        .more-info p{
+            font-size: 16px;
+        }
+     
+}
+
+
+@media only screen and (max-height:480px) and (orientation:landscape){
+.more-info{
+    height: auto;
+}
+
+    .more-info h1{
+        font-family: "Montserrat-Black";
+        font-size: 1.5rem;
+        color: black;
+        font-weight:bolder;
+        
+        margin-bottom: 40px;
+        }
+        
+        .more-info p{
+            font-size: 16px;
+        }
+}
+
+.bdp{
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10; 
+    opacity: 0.7;
+    background-color: black;
+    
+ }
+ 
+ .md{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     position:absolute;
+     padding:15px 15px 10px 25px;
+     top: 0;
+     bottom: 0;
+     right:0;
+     left: 0;
+     width:40%;
+     height: 65%;
+     margin:auto;
+     z-index: 50;
+ }
+
+

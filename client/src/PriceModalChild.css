@@ -1,0 +1,289 @@
+
+.backdrop{
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10; 
+    opacity: 0.7;
+    background-color: black;
+    
+ }
+ 
+ .modal{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     position:absolute;
+     padding:15px 15px 10px 25px;
+     top: 0;
+     bottom: 0;
+     right:0;
+     left: 0;
+     background-color: white;
+     border:0px solid black;
+     width:40%;
+     height: 65%;
+     margin:auto;
+     z-index: 50;
+ }
+
+ 
+ .modal p {
+     font-size: 24px;
+     line-height: 35px;
+     margin-top: -30px;
+ }
+ 
+ .modal div{
+     width: 100%;
+     height: 30%;
+     display: flex;
+     justify-content:left;
+     align-items: center;
+     background-color: white;
+ }
+ 
+.modal h4{
+    color: rgb(33, 95, 114);
+    font-weight: bold;
+    line-height: 40px;
+    font-size: 25px;
+}
+
+ .x{
+     padding: 10px;
+     position: absolute;
+     top:0;
+     right: 0;
+     cursor: pointer;
+     color: grey;
+     font-weight: bold;
+     font-style: italic;
+ }
+ .modal section{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: white;    
+ }
+
+ .planName{
+     font-weight: bold;
+     font-style: italic;
+     color: #291dda;
+ }
+
+ .amount{
+    font-weight: bold;
+    font-style: italic;
+    color: green;   
+ }
+ .modal label{
+     margin-bottom: 0px;
+     font-weight: bold;
+     padding-right: 10px;
+ }
+ .textInput{
+     border: 0px solid black;
+     border-bottom: 1px solid grey;
+     outline: none;
+     width:40%;
+ }
+
+ .loadingIcon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position:absolute;
+    padding:15px 15px 10px 25px;
+    top: 0;
+    bottom: 0;
+    right:0;
+    left: 0;
+    background-color: white;
+    border:0px solid black;
+    width:40%;
+    height: 65%;
+    margin:auto;
+    z-index: 50;
+
+ }
+ @keyframes modalFadeOut{
+     0%{
+         opacity: 1;
+     }
+     25%{
+         opacity: 0.75;
+     }
+     50%{
+         opacity: 0.5;
+     }
+     75%{
+         opacity: 0.25;
+     }
+     100%{
+         opacity: 0;
+     }
+ }
+ 
+ @keyframes modalFadeIn{
+     0%{
+         opacity: 0;
+     }
+     25%{
+         opacity: 0.25;
+     }
+     50%{
+         opacity: 0.5;
+     }
+     75%{
+         opacity: 0.75;
+     }
+     100%{
+         opacity: 1;
+     }
+ }
+ 
+ @keyframes backdropFadeIn{
+     0%{
+         opacity: 0;
+     }
+     25%{
+         opacity: 0.175;
+     }
+     50%{
+         opacity: 0.35;
+     }
+     75%{
+         opacity: 0.525;
+     }
+     100%{
+         opacity: 0.7;
+     }    
+ }
+ 
+ @keyframes backdropFadeOut{
+     0%{
+         opacity: 0.7;
+     }
+     25%{
+         opacity: 0.525;
+     }
+     50%{
+         opacity: 0.35;
+     }
+     75%{
+         opacity: 0.175;
+     }
+     100%{
+         opacity: 0;
+     }
+ }
+
+.imgSpan{
+    padding-left: 10px;
+}
+
+ #proceed{
+    width:30%;
+    height: 30%;
+    background-color: rgb(59, 235, 59);
+    font-weight: bold;
+    transition:all 0.6s ease-in-out;
+    border: none;
+}
+
+#proceed:hover:not(:disabled){
+    color: white;
+    background-color: rgb(4, 161, 4); 
+    width: 32%;
+    height: 40%;
+    outline: none;
+    transition:all 0.6s ease-in-out;
+}
+
+@media only screen and (max-width:1200px){
+    .modal{
+        width:70%;
+    }
+    .textInput {
+        width:45%;
+    }
+}
+
+@media only screen and (max-width:1200px) and (orientation:landscape){
+    .modal{
+        width:70%;
+        height: 90%;
+        font-size: 16px;
+    }
+
+    .modal h4{
+        line-height: 30px;
+        font-size: 20px;
+    }
+
+    .modal input[type="text"]{
+        font-size: 14px;
+    }
+
+    .modal label{
+        font-size: 14px;
+    }
+
+    #proceed{
+        height: unset;
+    }
+    
+    #proceed:hover:not(:disabled){
+        height: unset;
+    }
+}
+
+@media only screen and (max-width:750px){
+    .modal{
+        width:80%;
+        height: 75%;
+        font-size: 16px;
+    }
+    .modal h4{
+        
+        line-height: 30px;
+        font-size: 18px;
+    }
+
+    .modal input[type="text"]{
+        font-size: 10px;
+    }
+
+    .modal label{
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width:750px) and (orientation:landscape){
+    .modal{
+        width:80%;
+        height: 90%;
+        font-size: 16px;
+    }
+
+    .textInput {
+        width:30%;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .textInput {
+        width:52%;
+    }
+    .modal label{
+        padding-right: 5px;
+    }
+}
