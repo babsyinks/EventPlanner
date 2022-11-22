@@ -1,4 +1,4 @@
-import React,{useState,useEffect, Fragment,useReducer} from 'react'
+import React,{useState,useEffect, Fragment} from 'react'
 import axios from 'axios'
 import validator from 'validator'
 import {validateVal} from './PriceModalChild'
@@ -7,7 +7,6 @@ import './Contact.css'
 
 export default (props)=>{
   const[isLoading,setIsLoading] = useState(false)
-  useReducer()
   const[isDisabled,setIsDisabled] = useState(true)
   const[name,setName] = useState('')
   const[nameIsValid,setNameIsValid] = useState(false)
