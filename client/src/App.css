@@ -5,6 +5,7 @@ html,body{
     overflow-x: hidden;
     
 }
+
 .navigation{
     padding: 15px 30px 15px 30px;
     max-width: 100%;
@@ -110,7 +111,7 @@ h3{
 
 .testimony{
     background-color: #444ed1;
-    height: 70%;
+    height: 85%;
 }
 .items{
     padding:600px;
@@ -169,7 +170,7 @@ h3{
 }
 
 .white-section{
-    padding: 15px 100px;
+    padding: 15px 100px 90px;
     text-align: center;
     background-color:#291dda;
     height:15%;
@@ -194,7 +195,7 @@ h3{
 }
 .abt{
     padding-top: 60px;
-    height: 70%;
+    
     font-family: "Montserrat-Black";
     
 }
@@ -207,8 +208,7 @@ h3{
     font-family: 'Heebo', sans-serif;
 }
 .pricing{
-    
-    height: 90%;
+    height: 100%;
 }
 
 
@@ -249,13 +249,10 @@ h3{
         line-height: 1.5;
         padding-left: 75px;
     }
-    .white-section{
-        height:auto;
-    }
 
     .testimony {
         background-color: #444ed1;
-        height: auto;
+        height: 85%;
     }
 }
 
@@ -430,7 +427,7 @@ h3{
 
 @media only screen and (max-height:700px) and (orientation:landscape){
     .testimony{
-        height: auto;
+        height: 80%;
     }
 }
 

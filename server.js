@@ -14,16 +14,6 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${FLUTTER_SECRET}`
 const port = process.env.PORT || 3001
 const app = express()
 app.use(express.json())
-/* var whitelist = ['https://eventaserver.onrender.com, https://eventa-luxury.onrender.com']
-var corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-} */
 app.options('*', cors())
 app.use(cors())
 app.post('/api/flutter',async (req,res)=>{
@@ -190,10 +180,11 @@ app.get('*',(req,res)=>{
     res.sendFile(path.join(__dirname,'client','public','index.html'))
 })
 
-const credentials = { 
+/* const credentials = { 
                      key:fs.readFileSync(path.join(__dirname,'client','key.pem')),
                      cert:fs.readFileSync(path.join(__dirname,'client','cert.pem'))
-                    } 
+                    }  */
+const credentials = {}
 
 const serv = https.createServer(credentials,app) 
 
